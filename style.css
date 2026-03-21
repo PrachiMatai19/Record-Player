@@ -1,0 +1,111 @@
+body {
+    background: #1a1a1b;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+}
+.frame{
+    margin-top: 50px;
+    width: 400px;
+    height: 500px;
+    border-radius: 15px;
+    background-color:#3e4a3d;
+    display: flex;
+    gap: 70px;
+    padding-top: 50px;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    box-shadow: 10px 10px 30px rgba(0,0,0,0.5),
+    inset 10px 10px 25px rgba(0,0,0,0.4);
+}
+
+.disc{
+    width: 60%;
+  aspect-ratio: 1/1;
+    background-color: #0f0f0f;
+    border-radius: 50% ;
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+    background: conic-gradient(from 0deg ,black, #252323, black);
+    animation: spin 10s linear infinite;
+    animation-play-state: paused;
+
+
+}
+.button{
+    background-color:#1a1a1b ;
+    color: #e8e4d9;
+    font-size: 25px;
+   letter-spacing: 2px;
+    cursor: pointer;
+}
+.disc.playing {
+    animation-play-state: running;
+}
+
+
+.label{
+    width: 50px;
+    height: 50px;
+    background-color: #e8e4d9;
+    border-radius: 50% ;
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+
+
+}
+/*small inside circle*/
+.label2 {
+    width: 25px;
+    height: 25px;
+    background-color: #3e4a3d;
+    border-radius: 50%;
+
+}
+/*@keyframes wobble-spin {*/
+/*    0%   { transform: rotate(0deg); }*/
+/*    50%  { transform: rotate(180deg) scale(1.1); } !* Grow halfway through *!*/
+/*    100% { transform: rotate(360deg) scale(1.0); } !* Shrink back at the end *!*/
+/*}*/
+
+.progresscontain {
+    width: 80%;
+    height: 10px;
+    background-color: #1a1a1b; /* Matches your body background */
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    /* This makes it look "sunken" into the green frame */
+    box-shadow: inset 2px 2px 5px rgba(0,0,0,0.5);
+}
+
+.progressbar {
+    width: 0%; /* Starts at zero */
+    height: 100%;
+    background-color: #e8e4d9; /* Matching your label color */
+    border-radius: 5px;
+    /* Smooth transition so the bar doesn't "jump" every second */
+    transition: width 0.1s linear;
+}
+@keyframes spin {
+
+    to{
+        transform: rotate(360deg);
+    }
+
+}
+
+.button:hover{
+    transform: scale(1.05);
+}
+
+.frame:hover{
+    transform: scale(1.05);
+}
