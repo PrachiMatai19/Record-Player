@@ -44,6 +44,7 @@ body {
     font-size: 25px;
    letter-spacing: 2px;
     cursor: pointer;
+    border-radius: 50%;
 }
 .disc.playing {
     animation-play-state: running;
