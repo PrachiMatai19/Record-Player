@@ -95,6 +95,7 @@ body {
     background-color: #e8e4d9; 
     border-radius: 5px;
     transition: width 0.1s linear;
+    pointer-events: none;
 }
 @keyframes spin {
 
