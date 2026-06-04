@@ -4,7 +4,7 @@ const song = document.getElementById('Song');
 const progress = document.getElementById('progress');
 const progresscontain = document.getElementById('progresscontain');
 
-//pause and play
+// Pause and Play Functionality
 playBtn.addEventListener('click', () => {
     if (song.paused) {
         song.play();
@@ -19,16 +19,18 @@ playBtn.addEventListener('click', () => {
     }
 });
 
-//progress bar
+// Progress Bar Tracking
 song.addEventListener('timeupdate', () => {
     if (song.duration) {
         const { duration, currentTime } = song;
         const progressPercent = (currentTime / duration) * 100;
+
+        // FIXED: Using backticks (`) to dynamically inject the math variable
         progress.style.width = `${progressPercent}%`;
     }
 });
 
-//jumping song
+// Jumping/Skipping Song Position
 progresscontain.addEventListener('click', (e) => {
     const width = progresscontain.clientWidth;
     const clickX = e.offsetX;

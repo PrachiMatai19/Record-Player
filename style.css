@@ -8,20 +8,23 @@ body {
     align-items: start;
     justify-content: center;
 }
-.frame{
+.frame {
     margin-top: 50px;
     width: 400px;
     height: 500px;
     border-radius: 15px;
     background-color:#3e4a3d;
     display: flex;
-    gap: 70px;
+    gap: 30px;
     padding-top: 50px;
     flex-direction: column;
     justify-content: start;
     align-items: center;
     box-shadow: 10px 10px 30px rgba(0,0,0,0.5),
     inset 10px 10px 25px rgba(0,0,0,0.4);
+}
+.audio {
+    display: none;
 }
 
 .disc{
